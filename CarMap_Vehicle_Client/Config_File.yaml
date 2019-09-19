@@ -1,0 +1,79 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------
+
+# Operation Mode
+# 0 - Save Map, 1 - Update Map, 2 - Load Map
+OperationMode.OpCode: 0
+
+# Init Mode Constants
+# Save Map Settings
+# Stitch ( 0 - 82 and 77 - 164)
+SaveMap.StartFrom: 0
+SaveMap.StopAt: 181
+SaveMap.SaveMap: true
+SaveMap.ReuseMap: false
+SaveMap.UseBin: true
+
+# Update Map Settings
+UpdateMap.StartFrom: 0
+UpdateMap.StopAt: 181
+UpdateMap.SaveMap: true
+UpdateMap.ReuseMap: true
+UpdateMap.UseBin: true
+
+# Load Map Settings
+# 80 for trace 3
+# 164 for trace 2
+LoadMap.StartFrom: 0
+LoadMap.StopAt: 181
+LoadMap.SaveMap: false
+LoadMap.ReuseMap: true
+LoadMap.UseBin: true
+
+# Path Variables
+
+###########################
+# Project path
+###########################
+###########################
+Path.PathToCameraCalibrationFile: CamCalib.yaml
+Path.PathToVocabularyFile: ORB_SLAM2/Vocabulary/ORBvoc.bin
+##########################
+# Dataset path
+##########################
+Path.Dataset: CarMap_Dataset
+#########################
+# Path to save trajectories
+#########################
+Path.PathToResultsDirectory: Result_Directory
+########################
+# Map Files
+########################
+Path.LoadMap: CarMap_Dataset
+Path.E2ELatencyLog: sender_e2e_latency_remote_phone_stitch.csv
+# Constants
+Constant.RunLocalization: false
+Constant.SaveTrajectory: true
+Constant.IsStereo: true
+Constant.OrbVisualization: true
+
+
+# Modes
+Mode.RemoveDynamicObjects: true
+Mode.LoadDepth: false
+Mode.EvaluateSegmentation: false
+Mode.MajorityVoting: false
+Mode.RobustFeatureSearch: true
+
+###########################
+# Online Mode Settings
+###########################
+Mode.UploadToCloud: true
+Mode.LogE2ELatency: true
+# False for stitch and True for integration
+Mode.UploadOnlyDiff: false
+Constant.CloudIPAddress: ip.127.0.0.1
+Constant.CloudPort: 2000
+

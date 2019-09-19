@@ -1,0 +1,24 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------
+# Server stitching (server_stitch) constants
+#ServerStitch.PathToProject:
+#ServerStitch.PathToDataDirectory:
+ServerStitch.PathToMapDirectory: Results_Directory/
+#ServerStitch.PathToCameraCalibrationFile: ORB_SLAM2/Examples/Stereo/KITTI00-02.yaml
+ServerStitch.PathToCameraCalibrationFile: CamCalib.yaml
+ServerStitch.PathToVocabularyFile: ORB_SLAM2/Vocabulary/ORBvoc.bin
+ServerStitch.PathToBaseMap: Base_Map.bin
+ServerStitch.PathToSecondMap: XYZ.bin
+ServerStitch.PathToFinalMap: Updated_Match.bin
+ServerStitch.PathToLogFile: receiver_e2e_latency.csv
+# true for one shot stitching, false for progressive relocalization
+ServerStitch.OneShotStitching: true
+ServerStitch.VisualizeBaseMap: true
+ServerStitch.VisualizeSecondMap: false
+ServerStitch.VisualizeStereoFrames: false
+ServerStitch.ReceiveMaps: true
+ServerStitch.CloudServiceIPAddress: ip.127.0.0.1
+ServerStitch.CloudServicePort: 2000
+ServerStitch.IntegrateDiff: false
