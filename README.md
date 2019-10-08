@@ -1,5 +1,7 @@
 # CarMap-Fast 3D Feature Map Updates for Automobiles
 
+![](CarMap_Gif.gif)
+
 ## Features:
 1. CarMap-generated 3D lean map (20x smaller map than ORB-SLAM2)
 2. CarMap's dynamic object filter to remove dynamic objects
