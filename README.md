@@ -48,6 +48,8 @@ cmake ..
 make -j
 ```
 
+5) PCL 1.9.0
+
 ### Configuring CarMap:
 1) First build CarMap_Cloud_Service
 ```
