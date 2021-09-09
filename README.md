@@ -21,6 +21,12 @@ The cloud service: **CarMap_Cloud_Service**
 
 Both of them have similar dependencies and build instructions
 
+To make your life easier, simply download the CarMap docker using:
+```
+docker pull fawadahm/carmap_nvidia
+```
+
+With this, you can skip the text below and move to Configuring CarMap.</br>
 ### Dependencies:
 1) Run the build_carmap.sh script to build the dependencies needed
 ```
@@ -54,6 +60,7 @@ make -j
 1) First build CarMap_Cloud_Service
 ```
 cd CarMap_Cloud_Service
+bash build_dbow.sh
 mkdir build && cd build
 cmake ..
 make -j
@@ -61,6 +68,7 @@ make -j
 2) Build CarMap_Vehicle_Client
 ```
 cd CarMap_Vehicle_Client
+bash build_dbow.sh
 mkdir build && cd build
 cmake ..
 make -j
