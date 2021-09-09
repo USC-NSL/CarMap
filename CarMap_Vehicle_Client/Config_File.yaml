@@ -59,7 +59,6 @@ Constant.SaveTrajectory: true
 Constant.IsStereo: true
 Constant.OrbVisualization: true
 
-
 # Modes
 Mode.RemoveDynamicObjects: true
 Mode.LoadDepth: false
@@ -70,10 +69,10 @@ Mode.RobustFeatureSearch: true
 ###########################
 # Online Mode Settings
 ###########################
-Mode.UploadToCloud: true
+Mode.UploadToCloud: false
 Mode.LogE2ELatency: true
 # False for stitch and True for integration
 Mode.UploadOnlyDiff: false
 Constant.CloudIPAddress: ip.127.0.0.1
 Constant.CloudPort: 2000
-
+Constant.UploadFrameInterval: 10
