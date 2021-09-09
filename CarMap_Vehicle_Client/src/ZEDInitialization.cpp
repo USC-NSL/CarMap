@@ -5,7 +5,7 @@
 #include <Eigen/LU>
 #include <GlobalDefintions.h>
 
-
+/*
 using namespace sl;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -74,8 +74,10 @@ void initializeZEDSLAM (Camera *ptrToZEDCamera, TrackingParameters *ptrToTrackin
 
     return;
 }
+*/
 
 //SL Mat to CV Mat conversion
+/*
 cv::Mat slMat2cvMat(sl::Mat& input) {
     //convert MAT_TYPE to CV_TYPE
     int cv_type = -1;
@@ -113,6 +115,7 @@ cv::Mat slMat2cvMat(sl::Mat& input) {
     return cv::Mat(input.getHeight(), input.getWidth(), cv_type, input.getPtr<sl::uchar1>(sl::MEM_CPU));
 }
 
+*/
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// ORB SLAM 2 Interface ////////////////////////////////////////////////////////////
@@ -143,7 +146,7 @@ ORB_SLAM2::System *initializeORBSlam (string vocabFile, string settingFile, bool
         return new ORB_SLAM2::System (vocabFile, settingFile, ORB_SLAM2::System::MONOCULAR, visualization, saveMap, reuseMap, pathToLoadMapFile, runLocalizationMode, serverAddr, portNumber, isUploadMap, viewerWindowName, reconstructMap, isStitchMode, isDynamicObjectRemoval);
 }
 
-
+/*
 void runORBSLAMTracking (ORB_SLAM2::System *ptrToORBSLAMSystem, sl::Mat zedLeftView, sl::Mat zedRightView, int timeCounter, bool isStereo, ofstream* featureFile)
 {
     cv::Mat leftViewCV, rightViewCV, leftViewCVGray, rightViewCVGray;
@@ -163,7 +166,7 @@ void runORBSLAMTracking (ORB_SLAM2::System *ptrToORBSLAMSystem, sl::Mat zedLeftV
 
     return;
 }
-
+*/
 
 void printNumberOfKeyframes (ORB_SLAM2::System *ptrToORBSLAMSystem)
 {

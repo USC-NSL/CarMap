@@ -5,5 +5,7 @@ CarMap_Vehicle_Client/CarMap_Dataset/
 CarMap_Cloud_Service/build/
 CarMap_Cloud_Service/cmake-build-debug/
 CarMap_Cloud_Service/ORB_SLAM2/build/
+CarMap_Vehicle_Client/ORB_SLAM2/Thirdparty/DBoW2/build/
+CarMap_Vehicle_Client/ORB_SLAM2/Thirdparty/g2o/build/
 lib/
 .idea/

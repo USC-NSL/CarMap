@@ -5,7 +5,6 @@
 #ifndef CROWDSOURCED_HD_MAP_ZEDINITIALIZATION_H
 #define CROWDSOURCED_HD_MAP_ZEDINITIALIZATION_H
 
-#include <sl/Camera.hpp>
 #include <System.h>
 #include <fstream>
 #include<opencv2/core/core.hpp>
@@ -16,22 +15,14 @@ ofstream trajectoryFile;
 bool isTracking;
 bool isSaveTrajectory;
 
-
-using namespace sl;
-
-//Initialize ZED Camera
-int initializeZED (Camera *, InitParameters *, bool, sl::String);
-//Initialize ZED SLAM
-void initializeZEDSLAM (Camera *, TrackingParameters *, String, bool , String = NULL);
-
 //SL Mat to CV Mat conversion
-cv::Mat slMat2cvMat(sl::Mat&);
+//cv::Mat slMat2cvMat(sl::Mat&);
 
 
 //ORB SLAM2 Initialization
 ORB_SLAM2::System *initializeORBSlam (string vocabFile, string settingFile, bool visualization, bool saveMap, bool reuseMap, string pathToLoadMapFile, bool runLocalizationMode, bool saveTrajectory, string pathToTrajectoryFile, bool isStereo, const string serverAddr, const int portNumber, bool isUploadMap, string viewerWindowName, bool reconstructMap, bool isStitchMode, bool isDynamicObjectRemoval);
 ORB_SLAM2::System *initializeORBSlam (string vocabFile, string settingFile, bool visualization, bool saveMap, bool reuseMap, string pathToLoadMapFile, bool runLocalizationMode, bool saveTrajectory, string pathToTrajectoryFile, bool isStereo, const string serverAddr, const int portNumber, bool isUploadMap, string viewerWindowName, bool reconstructMap, bool isStitchMode, bool isDynamicObjectRemoval, bool isMajorityVoting, bool isRobustFeatureSearch);
-void runORBSLAMTracking (ORB_SLAM2::System *, sl::Mat, sl::Mat, int, bool isStereo, ofstream* featureFile=NULL);//periodic tracking using ORB SLAM
+//void runORBSLAMTracking (ORB_SLAM2::System *, sl::Mat, sl::Mat, int, bool isStereo, ofstream* featureFile=NULL);//periodic tracking using ORB SLAM
 
 
 void saveTrajectoryORBSLAMinSLAMMode (ORB_SLAM2::System * ptrToORBSLAM, const std::string pathToSaveTrajectory);
@@ -66,9 +57,5 @@ void InitMode (cv::FileStorage fSettings, const int opCode, int &startFrom, int 
 std::string GetMatType(const cv::Mat& mat);
 
 bool ConvertStringToBool (string inputStr);
-
-
-
-
 
 #endif //HD_MAP_PROJECT_ZEDINITIALIZATION_H

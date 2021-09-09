@@ -51,7 +51,7 @@ LIST(APPEND CUDA_NVCC_FLAGS "--compiler-options -fno-strict-aliasing -use_fast_m
 find_package(Curses REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(Pangolin REQUIRED)
-find_package(ZED 2 REQUIRED)
+#find_package(ZED 2 REQUIRED)
 find_package(GLUT REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(OpenGL REQUIRED)
@@ -70,7 +70,7 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/include
         ${EIGEN3_INCLUDE_DIR}
         ${Pangolin_INCLUDE_DIRS}
-        ${ZED_INCLUDE_DIRS}
+	#        ${ZED_INCLUDE_DIRS}
         ${GLEW_INCLUDE_DIRS}
         ${GLUT_INCLUDE_DIRS}
         ${CUDA_INCLUDE_DIRS}
@@ -84,7 +84,7 @@ link_libraries(${JSONCPP_LIBRARIES})
 
 
 
-link_directories(${ZED_LIBRARY_DIR})
+#link_directories(${ZED_LIBRARY_DIR})
 link_directories(${GLEW_LIBRARY_DIRS})
 link_directories(${GLUT_LIBRARY_DIRS})
 link_directories(${OpenGL_LIBRARY_DIRS})
@@ -125,7 +125,7 @@ cuda_add_library(${PROJECT_NAME} SHARED
         ORB_SLAM2/src/Initializer.cc
         ORB_SLAM2/src/Viewer.cc
         ORB_SLAM2/src/SemanticSegmentor.cpp
-        src/ZEDInitialization.cpp
+	src/ZEDInitialization.cpp
 	#        src/GLViewer.cpp
         )
 
@@ -138,7 +138,7 @@ target_link_libraries(${PROJECT_NAME}
         ${PROJECT_SOURCE_DIR}/ORB_SLAM2/Thirdparty/DBoW2/lib/libDBoW2.so
         ${PROJECT_SOURCE_DIR}/ORB_SLAM2/Thirdparty/g2o/lib/libg2o.so
         ${SPECIAL_OS_LIBS}
-        ${ZED_LIBRARIES}
+	#        ${ZED_LIBRARIES}
         ${OPENGL_LIBRARIES}
         ${GLUT_LIBRARIES}
         ${GLEW_LIBRARIES}
