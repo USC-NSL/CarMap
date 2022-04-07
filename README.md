@@ -134,3 +134,18 @@ In this section, we describe what some of the fields in Config_File.yaml of CarM
    * *UploadFrameInterval*: number of frames after which to upload map diff/segments to cloud
 
 
+## Citation
+```bibtex
+@inproceedings {carmap,
+  author = {Fawad Ahmad and Hang Qiu and Ray Eells and Fan Bai and Ramesh Govindan},
+  title = {{CarMap}: Fast 3D Feature Map Updates for Automobiles },
+  booktitle = {17th USENIX Symposium on Networked Systems Design and Implementation (NSDI 20)},
+  year = {2020},
+  isbn = {978-1-939133-13-7},
+  address = {Santa Clara, CA},
+  pages = {1063--1081},
+  url = {https://www.usenix.org/conference/nsdi20/presentation/ahmad},
+  publisher = {USENIX Association},
+  month = feb,
+}
+```
