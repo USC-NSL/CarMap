@@ -41,4 +41,4 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j
 cd ../../../
 # Build libpcl
-suod apt install libpcl-dev
+sudo apt install libpcl-dev
