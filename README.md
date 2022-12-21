@@ -138,7 +138,7 @@ In this section, we describe what some of the fields in Config_File.yaml of CarM
 ```bibtex
 @inproceedings {carmap,
   author = {Fawad Ahmad and Hang Qiu and Ray Eells and Fan Bai and Ramesh Govindan},
-  title = {{CarMap}: Fast 3D Feature Map Updates for Automobiles },
+  title = {CarMap: Fast 3D Feature Map Updates for Automobiles},
   booktitle = {17th USENIX Symposium on Networked Systems Design and Implementation (NSDI 20)},
   year = {2020},
   isbn = {978-1-939133-13-7},
